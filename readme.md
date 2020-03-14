@@ -1,0 +1,1 @@
+`th-cli create <project-name>`
