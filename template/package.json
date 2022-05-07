@@ -1,0 +1,8 @@
+{
+  "name": "th-cli",
+  "version": "1.0.0",
+  "description": "<%= answers.description %>",
+  "author": "<%- answers.author %>",
+  "dependencies": {
+  }
+}

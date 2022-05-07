@@ -1,24 +1,28 @@
 {
-    "name": "th-cli",
-    "version": "1.0.0",
-    "description": "Scaffolding for Create React Project.",
-    "author": "田豪峻 James<thjjames@163.com>",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/thjjames/th-cli.git"
-    },
-    "bin": {
-        "th-cli": "./bin/th-cli.js"
-    },
-    "dependencies": {
-        "chalk": "^3.0.0",
-        "commander": "^2.20.0",
-        "fs-extra": "^8.1.0",
-        "semver": "^6.3.0",
-        "validate-npm-package-name": "^3.0.0"
-    },
-    "engines": {
-        "node": ">=6.0.0",
-        "npm": ">=3.0.0"
-    }
+  "name": "th-cli",
+  "version": "1.0.0",
+  "description": "Scaffolding for Create React Project.",
+  "author": "田豪峻 James<thjjames@163.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thjjames/th-cli.git"
+  },
+  "bin": {
+    "th-cli": "bin/th-cli.js"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "commander": "^9.2.0",
+    "fs-extra": "^10.1.0",
+    "inquirer": "^8.2.4",
+    "mem-fs": "^2.2.1",
+    "mem-fs-editor": "^9.4.0",
+    "minimist": "^1.2.6",
+    "semver": "^7.3.7",
+    "validate-npm-package-name": "^4.0.0"
+  },
+  "engines": {
+    "node": ">=6.0.0",
+    "npm": ">=3.0.0"
+  }
 }
