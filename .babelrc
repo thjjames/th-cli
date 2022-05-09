@@ -1,0 +1,13 @@
+{
+  "presets": [
+    "@vue/app",
+    ["@babel/preset-typescript", {
+      "allExtensions": true
+    }]
+  ],
+  "plugins": [
+    ["@babel/plugin-transform-runtime", {
+      "corejs": 3 
+    }]
+  ]
+}
