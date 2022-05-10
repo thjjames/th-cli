@@ -14,7 +14,6 @@
     "setHusky": "npx husky set .husky/pre-commit 'npx lint-staged' && npx husky set .husky/commit-msg 'npx --no-install commitlint --edit $1'"
   },
   "lint-staged": {
-    "*.md": "prettier --write",
     "*.{js,vue}": "eslint --fix"
   },
   "dependencies": {
@@ -50,7 +49,6 @@
     "portfinder": "^1.0.28",
     "postcss-loader": "^3.0.0",
     "postcss-preset-env": "^6.7.0",
-    "prettier": "^2.4.0",
     "style-loader": "^1.0.0",
     "url-loader": "^1.1.2",
     "vue": "^2.6.10",
