@@ -19,7 +19,7 @@
         placeholder="Password"
       />
       <div class="blue-tip mb-32">Forgot Password?</div>
-      <button type="primary" @click="login">login</button>
+      <button @click="login">login</button>
     </div>
   </div>
 </template>
@@ -30,8 +30,8 @@ import { throttle } from '@/utils/decorator';
 
 @Component({})
 export default class Login extends Vue {
-  private username = '';
-  private password = '';
+  username = '';
+  password = '';
 
   @throttle(1000, { trailing: false })
   public login(): void {
@@ -56,7 +56,7 @@ export default class Login extends Vue {
   align-items: center;
   .bg-block {
     // flex: 0 0 auto;
-    background: url('../assets/img/img_login@2x.png') no-repeat;
+    background: url('../assets/img/login_bg@2x.png') no-repeat;
     background-size: contain;
     min-width: 496px;
     height: 388px;
