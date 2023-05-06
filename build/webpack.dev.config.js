@@ -9,7 +9,7 @@ const __webpackConfig__ = merge(webpackBaseConfig, {
     historyApiFallback: true,
     // https: true,
     host: '0.0.0.0',
-    port: 8089,
+    port: 8080,
     useLocalIp: true,
     disableHostCheck: true,
     open: true,
