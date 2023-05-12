@@ -7,9 +7,9 @@
     // ts编译出的目标版本
     "target": "es6",
     // 指定生成哪个模块系统代码
-    "module": "es6",
+    "module": "esnext",
     // ts在编译过程中，会有一些内建的js api(比如Math)，lib就用来指明所支持的js版本所对应的内建api
-    "lib": ["dom", "es5", "es6", "es7"],
+    "lib": ["esnext", "dom"],
     // 是否跳过所有声明文件(*.d.ts)的类型检查
     "skipLibCheck": false, 
     // 工作根目录
