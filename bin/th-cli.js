@@ -2,6 +2,7 @@
 
 const chalk = require('chalk');
 const semver = require('semver');
+const figlet = require('figlet');
 const currentNodeVersion = process.versions.node;
 const requiredNodeVersion = semver.minVersion(require('../package.json').engines.node).version;
 const cliName = require('../package.json').name;
@@ -31,5 +32,16 @@ program
     }
     require('../lib/create')(name, options);
   });
+
+program.on("--help", function () {
+  console.log(
+    figlet.textSync('th-cli', {
+      font: '3D-ASCII',
+      horizontalLayout: 'default',
+      verticalLayout: 'default',
+      whitespaceBreak: true,
+    })
+  );
+});
 
 program.parse(process.argv);
