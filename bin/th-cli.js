@@ -25,6 +25,7 @@ program
   .command('create <project-name>')
   .description('create a new project by th-cli')
   .option('-f, --force', 'overwrite target directory if it exists')
+  .option('-c, --clone', 'use git clone when fetching remote preset')
   .action((name, options) => {
     if (minimist(process.argv.slice(2))._.length > 1) {
       console.warn(chalk.yellow('You provided more than one argument.'))
