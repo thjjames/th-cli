@@ -25,7 +25,6 @@
     "validate-npm-package-name": "^4.0.0"
   },
   "engines": {
-    "node": ">=6.0.0",
-    "npm": ">=3.0.0"
+    "node": ">=12.22.12"
   }
 }
