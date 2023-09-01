@@ -27,7 +27,8 @@ program
   .option('-f, --force', 'overwrite target directory if it exists')
   .option('-c, --clone', 'use git clone when fetching remote preset')
   .action((name, options) => {
-    if (minimist(process.argv.slice(2))._.length > 1) {
+    // '/usr/local/bin/node' -> '/bin/th-cli.js' -> 'create'
+    if (minimist(process.argv.slice(3))._.length > 1) {
       console.warn(chalk.yellow('You provided more than one argument.'))
       console.warn(chalk.yellow('The first one will be used as the project name, the rest are ignored.'))
     }
