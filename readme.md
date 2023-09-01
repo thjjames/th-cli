@@ -1,6 +1,6 @@
 # th-cli
 ```bash
-npm install -g @github.com:thjjames/th-cli
+npm i -g github:thjjames/th-cli
 th-cli create <project-name>
 ```
 
