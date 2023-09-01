@@ -8,25 +8,32 @@ npm install
 npm run dev
 ```
 
+## monorepo
+exec subtree's scripts in the root directory
+```node
+pnpm -C template/xxx run dev
+```
+
+
 ## subtree
 init new branch by folder, do not repeat
 ```bash
-git subtree split --prefix=template -b template --rejoin
+git subtree split --prefix=template/xxx -b xxx --rejoin
 ```
 
 init folder by branch, do not repeat
 ```bash
-git subtree add --prefix=template https://github.com/thjjames/th-cli template
+git subtree add --prefix=template/xxx https://github.com/thjjames/th-cli xxx
 ```
 
 sync subtree's code to parent
 ```bash
-git subtree pull --prefix=template https://github.com/thjjames/th-cli template
+git subtree pull --prefix=template/xxx https://github.com/thjjames/th-cli xxx
 ```
 
 sync parent's code to subtree
 ```bash
-git subtree push --prefix=template https://github.com/thjjames/th-cli template
+git subtree push --prefix=template/xxx https://github.com/thjjames/th-cli xxx
 ```
 
 ## contributor
