@@ -1,7 +1,7 @@
 {
   "name": "th-cli",
   "version": "1.0.0",
-  "description": "Scaffolding for Create React Project.",
+  "description": "Scaffold for Creating Projects.",
   "author": "田豪峻 James<thjjames@163.com>",
   "repository": {
     "type": "git",
@@ -10,6 +10,12 @@
   "bin": {
     "th-cli": "bin/th-cli.js"
   },
+  "keywords": [
+    "scaffold",
+    "frontend",
+    "framework",
+    "vue"
+  ],
   "dependencies": {
     "chalk": "^4.1.2",
     "commander": "^9.2.0",
