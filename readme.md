@@ -2,6 +2,10 @@
 ```bash
 npm i -g github:thjjames/th-cli
 th-cli create <project-name>
+
+cd <project-name>
+npm install
+npm run dev
 ```
 
 ## subtree
