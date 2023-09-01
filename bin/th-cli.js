@@ -24,6 +24,7 @@ program
 program
   .command('create <project-name>')
   .description('create a new project by th-cli')
+  .option('-d, --default', 'skip prompts and use default preset')
   .option('-f, --force', 'overwrite target directory if it exists')
   .option('-c, --clone', 'use git clone when fetching remote preset')
   .action((name, options) => {
