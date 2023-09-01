@@ -35,6 +35,13 @@ program
     require('../lib/create')(name, options);
   });
 
+program
+  .command('list')
+  .description('list all the predefined presets')
+  .action(() => {
+    require('../lib/list')();
+  });
+
 program.on("--help", function () {
   console.log(
     figlet.textSync('th-cli', {
