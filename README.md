@@ -10,7 +10,7 @@ npm run dev
 
 ## monorepo
 exec subtree's scripts in the root directory
-```node
+```bash
 pnpm -C template/xxx run dev
 ```
 
