@@ -1,0 +1,43 @@
+.ellipsis(@w: auto) {
+    width: @w;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+}
+  
+.ellipsisLn(@line) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: @line;
+}
+  
+.clearfix() {
+    zoom: 1;
+    &::before,
+    &::after {
+        display: table;
+        content: '';
+    }
+    &::after {
+        clear: both;
+    }
+}
+  
+.placeholder(@color: @disabled-color) {
+    // Firefox
+    &::-moz-placeholder {
+        color: @color;
+        opacity: 1; // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526
+    }
+    // Internet Explorer 10+
+    &:-ms-input-placeholder {
+        color: @color;
+    }
+    // Safari and Chrome
+    &::-webkit-input-placeholder {
+        color: @color;
+    }
+}
