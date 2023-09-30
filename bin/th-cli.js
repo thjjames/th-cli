@@ -43,7 +43,7 @@ program
     require('../lib/list')();
   });
 
-program.on("--help", function () {
+program.on('--help', function () {
   console.log(
     figlet.textSync('th-cli', {
       font: '3D-ASCII',
