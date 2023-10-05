@@ -5,11 +5,11 @@
     // 允许隐式的any类型
     "noImplicitAny": false,
     // ts编译出的目标版本
-    "target": "es6",
+    "target": "ESNext",
     // 指定生成哪个模块系统代码
-    "module": "esnext",
+    "module": "ESNext",
     // ts在编译过程中，会有一些内建的js api(比如Math)，lib就用来指明所支持的js版本所对应的内建api
-    "lib": ["esnext", "dom"],
+    "lib": ["ESNext", "DOM"],
     // 是否跳过所有声明文件(*.d.ts)的类型检查
     "skipLibCheck": false, 
     // 工作根目录
