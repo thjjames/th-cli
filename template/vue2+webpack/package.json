@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "<%= answers.description %>",
   "author": "<%- answers.author %>",
-  "main": "./src/main.ts",
   "scripts": {
     "dev": "APP_MODE=dev webpack-dev-server --config build/webpack.dev.config.js",
     "build:SIT": "APP_MODE=sit webpack --config build/webpack.prod.config.js",
@@ -21,7 +20,9 @@
     "lodash.throttle": "^4.1.1",
     "swagger": "github:thjjames/swagger",
     "vue-property-decorator": "^9.1.2",
-    "vuex": "^3.6.2"
+    "vue": "^2.6.10",
+    "vuex": "^3.6.2",
+    "vue-router": "^3.0.3"
   },
   "devDependencies": {
     "@babel/core": "^7.15.8",
@@ -51,20 +52,11 @@
     "postcss-preset-env": "^6.7.0",
     "style-loader": "^1.0.0",
     "url-loader": "^1.1.2",
-    "vue": "^2.6.10",
     "vue-loader": "^15.7.10",
-    "vue-router": "^3.0.3",
     "vue-template-compiler": "^2.6.10",
     "webpack": "^4.39.2",
     "webpack-cli": "^3.3.6",
     "webpack-dev-server": "^3.11.0",
     "webpack-merge": "^5.0.9"
-  },
-  "peerDependencies": {
-    "vue": "^2.6.10"
-  },
-  "engines": {
-    "node": ">= 6.0.0"
-  },
-  "license": "MIT"
+  }
 }
