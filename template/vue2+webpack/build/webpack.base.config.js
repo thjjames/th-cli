@@ -3,7 +3,7 @@ const path = require('path');
 const { VueLoaderPlugin } = require('vue-loader');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 function resolve(dir) {
-  return path.join(__dirname, '..', dir);
+  return path.resolve(__dirname, '..', dir);
 }
 
 module.exports = {
@@ -11,7 +11,7 @@ module.exports = {
     main: './src/main.ts'
   },
   output: {
-    path: path.join(__dirname, '../dist'),
+    path: resolve('dist'),
     publicPath: '/',
     filename: '[name].js',
     chunkFilename: '[name].chunk.js'
@@ -23,7 +23,7 @@ module.exports = {
       'process.env.BUILD_TIME': JSON.stringify(new Date())
     }),
     new HtmlWebpackPlugin({
-      template: path.join(__dirname, '../public/index.html'),
+      template: resolve('public/index.html')
     })
   ],
   module: {

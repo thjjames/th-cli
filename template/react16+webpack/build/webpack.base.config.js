@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 function resolve(dir) {
-    return path.join(__dirname, '..' ,dir)
+    return path.resolve(__dirname, '..' ,dir)
 }
 
 //webpack配置项
@@ -51,7 +51,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: resolve('index.html')
+            template: resolve('public/index.html')
         }),
         new webpack.DefinePlugin({ // 定义模块内部全局变量
             'process.env.APP_MODE': JSON.stringify(process.env.APP_MODE),
