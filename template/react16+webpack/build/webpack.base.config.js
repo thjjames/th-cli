@@ -36,13 +36,14 @@ module.exports = {
                 ]
             },
             {
-                test: /\.(png|jpe?g|gif|svg|eot|ttf|woff2?)$/,
+                test: /\.(png|jpe?g|gif|svg|eot|ttf|otf|woff2?)$/,
                 exclude: /node_modules/,
                 use: [
                     {
                         loader: 'url-loader',
                         options: {
-                            limit: 8192
+                            esModule: false,
+                            limit: 1024 * 4
                         }
                     }
                 ]

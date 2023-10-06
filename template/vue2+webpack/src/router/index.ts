@@ -5,10 +5,10 @@ Vue.use(VueRouter);
 
 const routes = [
   {
-    name: 'login',
+    name: 'home',
     path: '/',
-    alias: '/login',
-    component: () => import('@/views/login.vue')
+    alias: '/home',
+    component: () => import('@/views/Home.vue')
   }
 ];
 
