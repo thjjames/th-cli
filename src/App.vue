@@ -9,14 +9,13 @@
 
 <style lang="less">
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
+  min-width: 1200px;
   min-height: 100vh;
+  margin: 0;
   color: #333;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
   #app {
-    max-width: 1280px;
     margin: 0 auto;
     padding: 2rem;
     text-align: center;
