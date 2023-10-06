@@ -16,7 +16,7 @@ const __webpackConfig__ = merge(webpackBaseConfig, {
     hot: true,
     proxy: {
       '/api': {
-        target: 'http://0.0.0.0:3000/',
+        target: 'https://getman.cn/api',
         pathRewrite: { '^/api': '' },
         secure: false, // 如果是https接口，需要配置这个参数
         changeOrigin: true

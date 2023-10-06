@@ -7,5 +7,7 @@ const swagger = Swagger.create({
   baseURL,
   headers: { 'X-Auth-Token': store.state.userInfo?.token }
 });
-swagger.use(LoadingModule).use(ErrorModule);
+swagger.use(LoadingModule).use(ErrorModule, {
+  codeKey: 'status'
+});
 Vue.prototype.$swagger = swagger;
