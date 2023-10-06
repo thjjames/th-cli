@@ -64,7 +64,7 @@ importers:
         version: 6.16.0(react-dom@16.14.0)(react@16.14.0)
       swagger:
         specifier: git@github.com:thjjames/swagger
-        version: git@github.com+thjjames/swagger/51dd4e7bcac101cefffba6e29b53212a60209f56
+        version: github.com/thjjames/swagger/08491d3c769d89b1b10d5dd99b6bb102923abbab
     devDependencies:
       '@babel/core':
         specifier: ^7.12.1
@@ -113,7 +113,7 @@ importers:
         version: 1.0.28(supports-color@6.1.0)
       postcss-loader:
         specifier: ^4.3.0
-        version: 4.3.0(postcss@7.0.39)(webpack@4.47.0)
+        version: 4.3.0(postcss@8.4.31)(webpack@4.47.0)
       postcss-preset-env:
         specifier: ^6.7.0
         version: 6.7.0
@@ -141,18 +141,21 @@ importers:
 
   template/vue2+webpack:
     dependencies:
-      dayjs:
-        specifier: ^1.10.8
-        version: 1.10.8
       lodash.throttle:
         specifier: ^4.1.1
         version: 4.1.1
       swagger:
         specifier: github:thjjames/swagger
-        version: git@github.com+thjjames/swagger/51dd4e7bcac101cefffba6e29b53212a60209f56
+        version: github.com/thjjames/swagger/08491d3c769d89b1b10d5dd99b6bb102923abbab
+      vue:
+        specifier: ^2.6.10
+        version: 2.6.10
       vue-property-decorator:
         specifier: ^9.1.2
         version: 9.1.2(vue-class-component@7.2.6)(vue@2.6.10)
+      vue-router:
+        specifier: ^3.0.3
+        version: 3.0.3(vue@2.6.10)
       vuex:
         specifier: ^3.6.2
         version: 3.6.2(vue@2.6.10)
@@ -238,15 +241,9 @@ importers:
       url-loader:
         specifier: ^1.1.2
         version: 1.1.2(webpack@4.39.2)
-      vue:
-        specifier: ^2.6.10
-        version: 2.6.10
       vue-loader:
         specifier: ^15.7.10
         version: 15.8.0(css-loader@3.2.0)(webpack@4.39.2)
-      vue-router:
-        specifier: ^3.0.3
-        version: 3.0.3(vue@2.6.10)
       vue-template-compiler:
         specifier: ^2.6.10
         version: 2.6.10
@@ -4337,10 +4334,6 @@ packages:
       assert-plus: 1.0.0
     dev: true
     optional: true
-
-  /dayjs@1.10.8:
-    resolution: {integrity: sha512-wbNwDfBHHur9UOzNUjeKUOJ0fCb0a52Wx0xInmQ7Y8FstyajiV1NmK1e00cxsr9YrE9r7yAChE0VvpuY5Rnlow==}
-    dev: false
 
   /de-indent@1.0.2:
     resolution: {integrity: sha512-e/1zu3xH5MQryN2zdVaF0OrdNLUbvWxzMbi+iNA6Bky7l1RoP8a2fIbRocyHclXt/arDrrR6lL3TqFD9pMQTsg==}
@@ -8513,7 +8506,7 @@ packages:
       schema-utils: 1.0.0
     dev: true
 
-  /postcss-loader@4.3.0(postcss@7.0.39)(webpack@4.47.0):
+  /postcss-loader@4.3.0(postcss@8.4.31)(webpack@4.47.0):
     resolution: {integrity: sha512-M/dSoIiNDOo8Rk0mUqoj4kpGq91gcxCfb9PoyZVdZ76/AuhxylHDYZblNE8o+EQ9AMSASeMFEKxZf5aU6wlx1Q==}
     engines: {node: '>= 10.13.0'}
     peerDependencies:
@@ -8523,7 +8516,7 @@ packages:
       cosmiconfig: 7.1.0
       klona: 2.0.6
       loader-utils: 2.0.4
-      postcss: 7.0.39
+      postcss: 8.4.31
       schema-utils: 3.3.0
       semver: 7.3.7
       webpack: 4.47.0(webpack-cli@3.3.12)
@@ -8845,6 +8838,7 @@ packages:
 
   /prr@1.0.1:
     resolution: {integrity: sha512-yPw4Sng1gWghHQWj0B3ZggWUm4qVbPwPFcRG8KyxiU7J2OHFSoEHKS+EZ3fv5l1t9CyCiop6l/ZYeWbrgoQejw==}
+    requiresBuild: true
     dev: true
 
   /pseudomap@1.0.2:
@@ -10874,7 +10868,7 @@ packages:
       vue: ^2
     dependencies:
       vue: 2.6.10
-    dev: true
+    dev: false
 
   /vue-style-loader@4.1.3:
     resolution: {integrity: sha512-sFuh0xfbtpRlKfm39ss/ikqs9AbKCoXZBpHeVZ8Tx650o0k0q/YCM7FRvigtxpACezfq6af+a7JeqVTWvncqDg==}
@@ -11485,8 +11479,8 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  git@github.com+thjjames/swagger/51dd4e7bcac101cefffba6e29b53212a60209f56:
-    resolution: {commit: 51dd4e7bcac101cefffba6e29b53212a60209f56, repo: git@github.com:thjjames/swagger.git, type: git}
+  github.com/thjjames/swagger/08491d3c769d89b1b10d5dd99b6bb102923abbab:
+    resolution: {tarball: https://codeload.github.com/thjjames/swagger/tar.gz/08491d3c769d89b1b10d5dd99b6bb102923abbab}
     name: swagger
     version: 1.0.0
     dependencies:

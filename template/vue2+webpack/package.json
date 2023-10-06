@@ -16,7 +16,6 @@
     "*.{js,vue}": "eslint --fix"
   },
   "dependencies": {
-    "dayjs": "^1.10.8",
     "lodash.throttle": "^4.1.1",
     "swagger": "github:thjjames/swagger",
     "vue-property-decorator": "^9.1.2",
