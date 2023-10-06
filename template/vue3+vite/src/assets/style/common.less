@@ -1,0 +1,52 @@
+html {
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+}
+
+a {
+  text-decoration: none;
+}
+
+input,
+button,
+textarea {
+  color: inherit;
+  font: inherit;
+}
+
+a,
+input,
+button,
+textarea,
+[class*='ant-'] {
+  &:focus {
+    outline: none;
+  }
+}
+
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+each(range(0, 40 ,2), {
+  .p-@{value} { padding: @value * 1px !important; }
+  .pt-@{value} { padding-top: @value * 1px !important; }
+  .pr-@{value} { padding-right: @value * 1px !important; }
+  .pb-@{value} { padding-bottom: @value * 1px !important; }
+  .pl-@{value} { padding-left: @value * 1px !important; }
+
+  .m-@{value} { margin: @value * 1px !important; }
+  .mt-@{value} { margin-top: @value * 1px !important; }
+  .mr-@{value} { margin-right: @value * 1px !important; }
+  .mb-@{value} { margin-bottom: @value * 1px !important; }
+  .ml-@{value} { margin-left: @value * 1px !important; }
+
+  .fs-@{value} { font-size: @value * 1px !important; }
+});

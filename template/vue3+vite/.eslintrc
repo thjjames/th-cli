@@ -1,0 +1,43 @@
+{
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+  "extends": [
+    "plugin:vue/vue3-strongly-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "./.eslintrc-auto-import.json"
+  ],
+  "parser": "vue-eslint-parser",
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "parser": "@typescript-eslint/parser",
+    "sourceType": "module"
+  },
+  "rules": {
+    "indent": ["error", 2],
+    "quotes": ["error", "single"],
+    "semi": ["error", "always"],
+    /* 空格规则START */
+    "array-bracket-spacing": ["warn"],
+    "key-spacing": ["warn"],
+    "keyword-spacing": ["warn"],
+    "no-multi-spaces": ["warn"],
+    "no-trailing-spaces": ["warn"],
+    "object-curly-spacing": ["warn", "always"],
+    "space-before-blocks": ["warn"],
+    "space-in-parens": ["warn", "never"],
+    "space-infix-ops": ["warn"],
+    /* 空格规则END */
+    "vue/html-self-closing": ["off"],
+    "vue/max-attributes-per-line": ["error", {
+      "singleline": 3,
+      "multiline": 1
+    }],
+    "vue/multi-word-component-names": ["off"],
+    "vue/singleline-html-element-content-newline": ["off"],
+    "@typescript-eslint/no-explicit-any": ["off"],
+    "@typescript-eslint/no-unused-vars": ["off"]
+  }
+}
