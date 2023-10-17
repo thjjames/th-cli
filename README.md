@@ -1,15 +1,22 @@
 # th-cli
 ```bash
+// global
 npm i -g github:thjjames/th-cli
 th-cli create <project-name>
-```
-or  
-```bash
+
+// immediate  
 npx github:thjjames/th-cli@latest create <project-name>
 ```
 
+run scripts after template created
+```bash
+cd <project-name>
+npm install
+npm run dev
+```
+
 ## monorepo
-exec subtree's scripts in the root directory
+run subtree's scripts in the root directory
 ```bash
 pnpm -C template/xxx run dev
 ```
