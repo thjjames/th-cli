@@ -2,6 +2,8 @@ const webpack = require("webpack");
 const path = require('path');
 const { VueLoaderPlugin } = require('vue-loader');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ESLintPlugin = require('eslint-webpack-plugin');
+
 function resolve(dir) {
   return path.resolve(__dirname, '..', dir);
 }
@@ -24,6 +26,9 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       template: resolve('public/index.html')
+    }),
+    new ESLintPlugin({
+      extensions: ['ts', 'tsx', 'js', 'jsx', 'vue']
     })
   ],
   module: {
@@ -37,12 +42,6 @@ module.exports = {
         test: /\.(j|t)sx?$/,
         exclude: /node_modules/,
         use: 'babel-loader'
-      },
-      {
-        test: /\.((j|t)sx?|vue)$/,
-        loader: 'eslint-loader',
-        enforce: 'pre',
-        include: [resolve('src')]
       },
       {
         test: /\.css$/,
