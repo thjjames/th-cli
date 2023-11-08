@@ -17,6 +17,8 @@
     "module": "ESNext",
     // 采用何种方式解析/查找ts文件中依赖的模块的位置
     "moduleResolution": "Bundler",
+    // 允许导入带有.json扩展名的模块
+    "resolveJsonModule": true,
     // 编译时获取类型申明文件
     "typeRoots": ["node_modules/@types", "src/types"],
     // 指定引入的类型声明文件，默认是自动引入所有声明文件，一旦指定该选项，则会禁用自动引入，改为只引入指定的类型声明文件，如果指定空数组[]则不引用任何文件，"node"则与@type/node包相关规则
