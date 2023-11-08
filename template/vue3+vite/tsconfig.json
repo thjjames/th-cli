@@ -1,45 +1,56 @@
 {
   "compilerOptions": {
-    // 开启严格模式，严格的类型检查规则，以确保程序的正确性    
+    /* Type Checking */
+    // 开启严格模式，严格的类型检查规则，以确保程序的正确性
     "strict": true,
     // 允许隐式的any类型
     "noImplicitAny": false,
 
+    /* Modules */
     // 工作根目录
     "baseUrl": ".",
     // 指定模块的路径，和baseUrl有关联，和webpack中resolve.alias配置一样
     "paths": {
       "@/*": ["*", "src/*"],
     },
-    // ts编译出的目标版本
-    "target": "ESNext",
     // 指定生成哪个模块系统代码
     "module": "ESNext",
-    // ts在编译过程中，会有一些内建的js api(比如Math)，lib就用来指明所支持的js版本所对应的内建api
-    "lib": ["ESNext", "DOM"],
-    // 是否跳过所有声明文件(*.d.ts)的类型检查
-    "skipLibCheck": true, 
+    // 采用何种方式解析/查找ts文件中依赖的模块的位置
+    "moduleResolution": "Bundler",
     // 编译时获取类型申明文件
     "typeRoots": ["node_modules/@types", "src/types"],
     // 指定引入的类型声明文件，默认是自动引入所有声明文件，一旦指定该选项，则会禁用自动引入，改为只引入指定的类型声明文件，如果指定空数组[]则不引用任何文件，"node"则与@type/node包相关规则
     "types": ["node"],
 
-    // 采用何种方式解析/查找ts文件中依赖的模块的位置
-    "moduleResolution": "Bundler",
-    // 不生成输出文件
-    "noEmit": true,
-    // 提供两个helper函数__importStar和__importDefault分别处理import * as和import default, 会主动设置default属性
-    "esModuleInterop": true,
+    /* Language and Environment */
+    // ts编译出的目标版本
+    "target": "ESNext",
+    // ts在编译过程中，会有一些内建的js api(比如Math)，lib就用来指明所支持的js版本所对应的内建api
+    "lib": ["ESNext", "DOM"],
+    // preserve模式将保持JSX作为输出的一部分，以便由另一个变换步骤（例如Babel）进一步编译
+    "jsx": "preserve",
     // 使用实验性的装饰器语法：在ts中装饰器还属于实验性语法
     "experimentalDecorators": true,
+
+    /* Emit */
+    // 不生成输出文件
+    "noEmit": true,
+    // 编译后生成map文件，调试的时候相关工具可以根据map文件定位到原来的ts中代码所在位置
+    "sourceMap": true,
+
+    /* JavaScript Support */
     // 允许编译javascript文件
     "allowJs": true,
     // 允许在javascript文件中报错，通常与allowJs一起使用
     "checkJs": true,
-    // 编译后生成map文件，调试的时候相关工具可以根据map文件定位到原来的ts中代码所在位置
-    "sourceMap": true,
-    // preserve模式将保持JSX作为输出的一部分，以便由另一个变换步骤（例如Babel）进一步编译
-    "jsx": "preserve",
+
+    /* Interop Constraints */
+    // 提供两个helper函数__importStar和__importDefault分别处理import * as和import default, 会主动设置default属性
+    "esModuleInterop": true,
+
+    /* Completeness */
+    // 是否跳过所有声明文件(*.d.ts)的类型检查
+    "skipLibCheck": true,
   },
   // 需要编译的文件
   "include": ["src/**/*"],
