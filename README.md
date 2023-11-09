@@ -15,12 +15,6 @@ npm install
 npm run dev
 ```
 
-## monorepo
-run subtree's scripts in the root directory
-```bash
-pnpm -C template/xxx run dev
-```
-
 ## subtree
 init new branch by folder, do not repeat
 ```bash
