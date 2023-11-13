@@ -27,6 +27,7 @@
     "@babel/plugin-transform-runtime": "^7.23.2",
     "@babel/preset-env": "^7.23.2",
     "@rollup/plugin-babel": "^6.0.4",
+    "@types/node": "^20.8.2",
     "conventional-changelog-cli": "^4.1.0",
     "eslint": "^8.51.0",
     "husky": "^8.0.3",
