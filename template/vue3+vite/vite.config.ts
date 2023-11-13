@@ -14,9 +14,7 @@ export default defineConfig({
   },
   plugins: [
     vue(),
-    legacy({
-      targets: ['defaults'],
-    }),
+    legacy(),
     eslintPlugin(),
     Components({
       dts: 'src/components.d.ts',

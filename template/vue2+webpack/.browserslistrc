@@ -1,4 +1,3 @@
 # used by @babel/preset-env & postcss-preset-env
 # Browsers that we support
-Chrome >= 51
-iOS >= 10
+defaults
