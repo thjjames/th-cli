@@ -14,7 +14,8 @@
     "scaffold",
     "frontend",
     "framework",
-    "vue"
+    "vue",
+    "vite"
   ],
   "dependencies": {
     "chalk": "^4.1.2",

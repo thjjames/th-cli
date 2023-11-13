@@ -1,0 +1,42 @@
+{
+  "name": "<%= name %>",
+  "version": "1.0.0",
+  "description": "<%= answers.description %>",
+  "keywords": [
+    "<%= name %>"
+  ],
+  "author": "<%- answers.author %>",
+  "type": "module",
+  "main": "./dist/index.umd.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "start": "pnpm run dev",
+    "build": "vite build",
+    "prepublishOnly": "pnpm run build",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
+  },
+  "dependencies": {
+    "@babel/runtime-corejs3": "^7.23.2"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-runtime": "^7.23.2",
+    "@babel/preset-env": "^7.23.2",
+    "@rollup/plugin-babel": "^6.0.4",
+    "conventional-changelog-cli": "^4.1.0",
+    "eslint": "^8.51.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^14.0.1",
+    "typescript": "^5.0.2",
+    "vite": "^4.4.5",
+    "vite-plugin-dts": "^3.6.3",
+    "vite-plugin-eslint": "^1.8.1"
+  },
+  "lint-staged": {
+    "*.{js,ts}": "eslint --fix"
+  }
+}

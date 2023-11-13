@@ -1,0 +1,30 @@
+{
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+  "extends": "eslint:recommended",
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "rules": {
+    "indent": ["error", 2],
+    "quotes": ["error", "single"],
+    "semi": ["error", "always"],
+    /* 空格规则START */
+    "array-bracket-spacing": ["warn"],
+    "key-spacing": ["warn"],
+    "keyword-spacing": ["warn"],
+    "no-multi-spaces": ["warn"],
+    "no-trailing-spaces": ["warn"],
+    "object-curly-spacing": ["warn", "always"],
+    "space-before-blocks": ["warn"],
+    "space-in-parens": ["warn", "never"],
+    "space-infix-ops": ["warn"],
+    /* 空格规则END */
+    "@typescript-eslint/no-explicit-any": ["off"],
+    "@typescript-eslint/no-unused-vars": ["off"]
+  }
+}

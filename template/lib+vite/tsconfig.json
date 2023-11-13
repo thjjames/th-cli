@@ -1,0 +1,57 @@
+{
+  "compilerOptions": {
+    /* Type Checking */
+    // 开启严格模式，严格的类型检查规则，以确保程序的正确性
+    "strict": true,
+    // 允许隐式的any类型
+    "noImplicitAny": false,
+
+    /* Modules */
+    // 工作根目录
+    "baseUrl": ".",
+    // 指定模块的路径，和baseUrl有关联，和webpack中resolve.alias配置一样
+    "paths": {
+      "@/*": ["*", "src/*"],
+    },
+    // 指定生成哪个模块系统代码
+    "module": "ESNext",
+    // 采用何种方式解析/查找ts文件中依赖的模块的位置
+    "moduleResolution": "Bundler",
+    // 允许导入带有.json扩展名的模块
+    "resolveJsonModule": true,
+
+    /* Language and Environment */
+    // ts编译出的目标版本
+    "target": "ESNext",
+    // ts在编译过程中，会有一些内建的js api(比如Math)，lib就用来指明所支持的js版本所对应的内建api
+    "lib": ["ESNext", "DOM"],
+    // preserve模式将保持JSX作为输出的一部分，以便由另一个变换步骤（例如Babel）进一步编译
+    "jsx": "preserve",
+    // 使用实验性的装饰器语法：在ts中装饰器还属于实验性语法
+    "experimentalDecorators": true,
+
+    /* Emit */
+    // 不生成输出文件
+    "noEmit": true,
+    // 编译后生成map文件，调试的时候相关工具可以根据map文件定位到原来的ts中代码所在位置
+    "sourceMap": true,
+
+    /* JavaScript Support */
+    // 允许编译javascript文件
+    "allowJs": true,
+    // 允许在javascript文件中报错，通常与allowJs一起使用
+    "checkJs": true,
+
+    /* Interop Constraints */
+    // 提供两个helper函数__importStar和__importDefault分别处理import * as和import default, 会主动设置default属性
+    "esModuleInterop": true,
+
+    /* Completeness */
+    // 是否跳过所有声明文件(*.d.ts)的类型检查
+    "skipLibCheck": true,
+  },
+  // 需要编译的文件
+  "include": ["lib/**/*", "src/**/*"],
+  // 不需要编译的文件
+  "exclude": ["node_modules", "dist"],
+}
