@@ -1,6 +1,2 @@
 node_modules/
 dist/
-index.html
-/*.json
-.cz-config.
-commitlint.config.js
