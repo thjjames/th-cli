@@ -1,7 +1,7 @@
 import path from 'path';
 import { defineConfig } from 'vite';
 import dts from 'vite-plugin-dts';
-import eslintPlugin from 'vite-plugin-eslint';
+import eslintPlugin from 'vite-plugin-eslint'; // vite-plugin-eslint is dependent on rollup@2 and rollup@2 has bugs in index.d.ts, so rollup@3 is installed as devDependencies
 import { getBabelOutputPlugin } from '@rollup/plugin-babel';
 
 export default defineConfig({
