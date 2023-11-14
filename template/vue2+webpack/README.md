@@ -6,14 +6,14 @@
 
 ```bash
 # install dependencies && devDependencies
-npm install
+pnpm install
 
 # serve with hot reload at localhost
 # you can replace them with HOST or PORT param in devServer config
-npm run start
+pnpm run start
 
 # build for dev | uat | st | prod environment
-npm run build
+pnpm run build
 ```
 
 ## Contributor

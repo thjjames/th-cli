@@ -16,6 +16,7 @@
     "*.{js,vue}": "eslint --fix"
   },
   "dependencies": {
+    "core-js": "^3.33.2",
     "lodash.throttle": "^4.1.1",
     "swagger": "github:thjjames/swagger",
     "vue": "^2.6.10",
@@ -25,9 +26,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.23.2",
-    "@babel/plugin-transform-runtime": "^7.23.2",
     "@babel/preset-typescript": "^7.23.2",
-    "@babel/runtime-corejs3": "^7.23.2",
     "@commitlint/cli": "^17.7.2",
     "@commitlint/config-conventional": "^17.7.0",
     "@types/node": "^20.8.2",
