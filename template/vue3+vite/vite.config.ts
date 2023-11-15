@@ -32,6 +32,7 @@ export default defineConfig({
         { 'lodash-es': [['*', '_']] },
       ],
       dts: 'src/auto-import.d.ts',
+      vueTemplate: true,
       eslintrc: {
         enabled: true,
         filepath: './.eslintrc-auto-import.json',
