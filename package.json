@@ -15,7 +15,8 @@
     "frontend",
     "framework",
     "vue",
-    "vite"
+    "vite",
+    "webpack"
   ],
   "dependencies": {
     "chalk": "^4.1.2",
