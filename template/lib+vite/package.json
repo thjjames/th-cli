@@ -18,7 +18,8 @@
     "start": "pnpm run dev",
     "build": "vite build",
     "prepublishOnly": "pnpm run build",
-    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
+    "version": "conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md",
+    "postversion": "git push && git push origin --tags"
   },
   "dependencies": {
     "@babel/runtime-corejs3": "^7.23.2"
