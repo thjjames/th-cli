@@ -17,6 +17,8 @@
     "module": "ESNext",
     // 采用何种方式解析/查找ts文件中依赖的模块的位置
     "moduleResolution": "Bundler",
+    // 允许ts文件使用特定于ts的扩展名（如.ts或.tsx）相互导入
+    "allowImportingTsExtensions": true,
     // 允许导入带有.json扩展名的模块
     "resolveJsonModule": true,
     // 编译时获取类型申明文件
@@ -27,7 +29,7 @@
     /* Language and Environment */
     // ts编译出的目标版本
     "target": "ESNext",
-    // ts在编译过程中，会有一些内建的js api(比如Math)，lib就用来指明所支持的js版本所对应的内建api
+    // ts在编译过程中，会有一些内建的js api（比如Math），lib就用来指明所支持的js版本所对应的内建api
     "lib": ["ESNext", "DOM"],
     // preserve模式将保持JSX作为输出的一部分，以便由另一个变换步骤（例如Babel）进一步编译
     "jsx": "preserve",
@@ -41,9 +43,9 @@
     "sourceMap": true,
 
     /* JavaScript Support */
-    // 允许编译javascript文件
+    // 允许编译js文件
     "allowJs": true,
-    // 允许在javascript文件中报错，通常与allowJs一起使用
+    // 允许在js文件中报错，通常与allowJs一起使用
     "checkJs": true,
 
     /* Interop Constraints */
@@ -51,7 +53,7 @@
     "esModuleInterop": true,
 
     /* Completeness */
-    // 是否跳过所有声明文件(*.d.ts)的类型检查
+    // 是否跳过所有声明文件（*.d.ts）的类型检查
     "skipLibCheck": true,
   },
   // 需要编译的文件
