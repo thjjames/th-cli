@@ -3,6 +3,8 @@ const path = require('path');
 const { VueLoaderPlugin } = require('vue-loader');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
+const Components = require('unplugin-vue-components/webpack');
+const { AntDesignVueResolver } = require('unplugin-vue-components/resolvers');
 
 function resolve(dir) {
   return path.resolve(__dirname, '..', dir);
@@ -29,6 +31,14 @@ module.exports = {
     }),
     new ESLintPlugin({
       extensions: ['ts', 'tsx', 'js', 'jsx', 'vue']
+    }),
+    Components({
+      dts: 'src/components.d.ts',
+      resolvers: [
+        AntDesignVueResolver({
+          importStyle: 'less',
+        }),
+      ]
     })
   ],
   module: {
@@ -60,10 +70,17 @@ module.exports = {
             loader: 'css-loader',
             options: {
               importLoaders: 2,
-            },
+            }
           },
           'postcss-loader',
-          'less-loader'
+          {
+            loader: 'less-loader',
+            options: {
+              lessOptions: {
+                javascriptEnabled: true // to support ant-design-vue@1 Inline Javascript in less
+              }
+            }
+          }
         ]
       },
       {

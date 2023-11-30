@@ -16,6 +16,7 @@
     "*.{js,vue}": "eslint --fix"
   },
   "dependencies": {
+    "ant-design-vue": "^1.7.8",
     "core-js": "^3.33.2",
     "lodash.throttle": "^4.1.1",
     "swagger": "github:thjjames/swagger",
@@ -48,6 +49,8 @@
     "postcss-preset-env": "^9.3.0",
     "style-loader": "^3.3.3",
     "typescript": "^5.0.2",
+    "unplugin-auto-import": "^0.16.6",
+    "unplugin-vue-components": "^0.25.2",
     "url-loader": "^4.1.1",
     "vue-loader": "^15.7.10",
     "vue-template-compiler": "^2.6.10",

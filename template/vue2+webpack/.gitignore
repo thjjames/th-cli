@@ -1,5 +1,8 @@
 node_modules
 dist
+components.d.ts
+auto-import.d.ts
+.eslintrc-auto-import.json
 
 # Editor directories and files
 .DS_Store
