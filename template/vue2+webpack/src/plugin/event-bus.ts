@@ -24,7 +24,7 @@ class EventBus {
   $off(name, fn) {
     if (!arguments.length) { // 没有参数时全部清空
       this.event = Object.create(null);
-    } else if (!fn) {  // 只有事件名时清空当前事件名
+    } else if (!fn) { // 只有事件名时清空当前事件名
       this.event[name] = [];
     } else {
       this.event[name] = this.event[name].filter(_fn => _fn !== fn || _fn.fn !== fn);

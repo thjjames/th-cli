@@ -13,7 +13,7 @@
     "setHusky": "npx husky set .husky/pre-commit 'npx lint-staged' && npx husky set .husky/commit-msg 'npx --no-install commitlint --edit $1'"
   },
   "lint-staged": {
-    "*.{js,vue}": "eslint --fix"
+    "*.{ts,js,vue}": "eslint --fix"
   },
   "dependencies": {
     "ant-design-vue": "^1.7.8",

@@ -8,12 +8,12 @@ const routes = [
     name: 'home',
     path: '/',
     alias: '/home',
-    component: () => import('@/views/Home.vue')
-  }
+    component: () => import('@/views/Home.vue'),
+  },
 ];
 
 export const router = new VueRouter({
   mode: 'hash',
-  routes
+  routes,
 });
 

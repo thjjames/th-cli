@@ -15,9 +15,9 @@ module.exports = merge(webpackBaseConfig, {
         target: 'https://getman.cn/api',
         pathRewrite: { '^/api': '' },
         secure: false, // 如果是https接口，需要配置这个参数
-        changeOrigin: true
-      }
-    }
+        changeOrigin: true,
+      },
+    },
   },
-  devtool: 'eval-source-map'
+  devtool: 'eval-source-map',
 });

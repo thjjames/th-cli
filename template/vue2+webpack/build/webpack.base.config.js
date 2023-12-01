@@ -12,25 +12,25 @@ function resolve(dir) {
 
 module.exports = {
   entry: { 
-    main: './src/main.ts'
+    main: './src/main.ts',
   },
   output: {
     path: resolve('dist'),
     publicPath: '/',
     filename: '[name].js',
-    chunkFilename: '[name].chunk.js'
+    chunkFilename: '[name].chunk.js',
   },
   plugins: [
     new VueLoaderPlugin(),
     new webpack.DefinePlugin({
       'process.env.APP_MODE': JSON.stringify(process.env.APP_MODE),
-      'process.env.BUILD_TIME': JSON.stringify(new Date())
+      'process.env.BUILD_TIME': JSON.stringify(new Date()),
     }),
     new HtmlWebpackPlugin({
-      template: resolve('public/index.html')
+      template: resolve('public/index.html'),
     }),
     new ESLintPlugin({
-      extensions: ['ts', 'tsx', 'js', 'jsx', 'vue']
+      extensions: ['ts', 'tsx', 'js', 'jsx', 'vue'],
     }),
     Components({
       dts: 'src/components.d.ts',
@@ -38,28 +38,28 @@ module.exports = {
         AntDesignVueResolver({
           importStyle: 'less',
         }),
-      ]
-    })
+      ],
+    }),
   ],
   module: {
     rules: [
       {
         test: /\.vue$/,
         exclude: /node_modules/, 
-        use: 'vue-loader'
+        use: 'vue-loader',
       }, 
       {
         test: /\.(j|t)sx?$/,
         exclude: /node_modules/,
-        use: 'babel-loader'
+        use: 'babel-loader',
       },
       {
         test: /\.css$/,
         use: [
           'style-loader', 
           'css-loader',
-          'postcss-loader'
-        ]
+          'postcss-loader',
+        ],
       },
       {
         test: /\.less$/,
@@ -70,18 +70,18 @@ module.exports = {
             loader: 'css-loader',
             options: {
               importLoaders: 2,
-            }
+            },
           },
           'postcss-loader',
           {
             loader: 'less-loader',
             options: {
               lessOptions: {
-                javascriptEnabled: true // to support ant-design-vue@1 Inline Javascript in less
-              }
-            }
-          }
-        ]
+                javascriptEnabled: true, // to support ant-design-vue@1 Inline Javascript in less
+              },
+            },
+          },
+        ],
       },
       {
         test: /\.(png|jpe?g|gif|svg|eot|ttf|otf|woff2?)$/,
@@ -91,18 +91,18 @@ module.exports = {
             loader: 'url-loader',
             options: {
               esModule: false,
-              limit: 1024 * 4
-            }
-          }
-        ]
-      }
-    ]
+              limit: 1024 * 4,
+            },
+          },
+        ],
+      },
+    ],
   },
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.jsx', '.vue'],
     alias: {
       'vue': 'vue/dist/vue.esm.js',
       '@': resolve('src')
-    }
-  }
+    },
+  },
 };
