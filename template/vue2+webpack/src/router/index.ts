@@ -1,19 +1,17 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
+import routes from './routes';
 
 Vue.use(VueRouter);
 
-const routes = [
-  {
-    name: 'home',
-    path: '/',
-    alias: '/home',
-    component: () => import('@/views/Home.vue'),
-  },
-];
-
-export const router = new VueRouter({
+const router = new VueRouter({
   mode: 'hash',
   routes,
 });
+router.beforeEach((to, from, next) => {
+  document.title = to.meta?.title || '';
+  next();
+});
+
+export default router;
 

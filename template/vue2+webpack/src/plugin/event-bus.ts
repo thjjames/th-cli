@@ -1,6 +1,7 @@
 import Vue from 'vue';
 
 class EventBus {
+  // eslint-disable-next-line @typescript-eslint/ban-types
   event: Record<string, (Function & { fn: Function })[]>;
 
   constructor() {
