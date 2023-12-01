@@ -12,5 +12,5 @@ createApp({
         count.value++;
       },
     };
-  }
+  },
 }).mount('#app');

@@ -5,7 +5,7 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    userInfo: JSON.parse(localStorage.getItem('userInfo') || '{}'),
+    userInfo: JSON.parse(localStorage.getItem('userInfo') as string),
   },
   mutations: {
     setUserInfo (state, payload) {

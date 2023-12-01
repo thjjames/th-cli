@@ -6,7 +6,7 @@ const userInfoStore = defineStore('userInfo', {
     setUserInfo (payload) {
       this.userInfo = payload;
       localStorage.setItem('userInfo', JSON.stringify(payload));
-    }
+    },
   },
 });
 

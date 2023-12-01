@@ -8,7 +8,7 @@ export default {
     const baseURL = process.env.NODE_ENV === 'development' ? '/api' : 'https://getman.cn/api';
     const swagger = Swagger.create({
       baseURL,
-      headers: { 'X-Auth-Token': userInfo.value?.token }
+      headers: { 'X-Auth-Token': userInfo.value?.token },
     });
     swagger.use(ErrorModule, {
       codeKey: 'status',
