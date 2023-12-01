@@ -1,6 +1,10 @@
 import Vue from 'vue';
 
 class EventBus {
+  event: {
+    string: Function | Function[],
+  };
+
   constructor() {
     this.event = Object.create(null);
   }
