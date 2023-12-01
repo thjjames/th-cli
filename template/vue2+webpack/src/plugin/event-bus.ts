@@ -1,9 +1,7 @@
 import Vue from 'vue';
 
 class EventBus {
-  event: {
-    string: Function | Function[],
-  };
+  event: Record<string, (Function & { fn: Function })[]>;
 
   constructor() {
     this.event = Object.create(null);
