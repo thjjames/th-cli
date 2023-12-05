@@ -13,4 +13,8 @@ createApp({
       },
     };
   },
+  template: `
+    <h1>{{ msg }}</h1>
+    <button type="button" @click="setCount">count is {{ count }}</button>
+  `,
 }).mount('#app');
