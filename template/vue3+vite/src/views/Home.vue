@@ -1,5 +1,4 @@
 <template>
-  <img src="@/assets/img/logo@2x.png" class="logo" alt="logo" />
   <div>
     <a href="https://vitejs.dev" target="_blank">
       <img src="@/assets/svg/vite.svg" class="logo vite" alt="Vite logo" />

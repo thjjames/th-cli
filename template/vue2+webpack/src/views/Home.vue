@@ -1,6 +1,5 @@
 <template>
   <div class="home-page">
-    <img src="@/assets/img/logo@2x.png" class="logo" alt="logo" />
     <div>
       <a href="https://www.webpackjs.com/" target="_blank">
         <img src="@/assets/svg/webpack.svg" class="logo webpack" alt="Webpack logo" />

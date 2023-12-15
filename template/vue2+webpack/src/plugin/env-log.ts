@@ -14,4 +14,4 @@ const style2 = [
 ].join(';');
 console.log('%c NODE_ENV %c %s ', style1, style2, process.env.NODE_ENV);
 console.log('%c APP_MODE %c %s ', style1, style2, process.env.APP_MODE);
-console.log('%c BUILD_TIME %c %s ', style1, style2, new Date(process.env.BUILD_TIME!).toLocaleString());
+console.log('%c BUILD_TIME %c %s ', style1, style2, process.env.BUILD_TIME);

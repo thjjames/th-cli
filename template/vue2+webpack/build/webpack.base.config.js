@@ -24,7 +24,7 @@ module.exports = {
     new VueLoaderPlugin(),
     new webpack.DefinePlugin({
       'process.env.APP_MODE': JSON.stringify(process.env.APP_MODE),
-      'process.env.BUILD_TIME': JSON.stringify(new Date()),
+      'process.env.BUILD_TIME': JSON.stringify(new Date().toLocaleString()),
     }),
     new HtmlWebpackPlugin({
       template: resolve('public/index.html'),

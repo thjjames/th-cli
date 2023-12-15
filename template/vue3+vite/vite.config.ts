@@ -10,7 +10,7 @@ import AutoImport from 'unplugin-auto-import/vite';
 export default defineConfig({
   // base: '/',
   define: {
-    'process.env.BUILD_TIME': JSON.stringify(new Date()),
+    'process.env.BUILD_TIME': JSON.stringify(new Date().toLocaleString()),
   },
   plugins: [
     vue(),
