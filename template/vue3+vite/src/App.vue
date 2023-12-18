@@ -1,7 +1,5 @@
 <template>
-  <a-config-provider>
-    <router-view />
-  </a-config-provider>
+  <router-view />
 </template>
 
 <script lang="ts" setup>
@@ -9,7 +7,7 @@
 
 <style lang="less">
 body {
-  min-width: 1200px;
+  // min-width: 1200px;
   min-height: 100vh;
   margin: 0;
   color: #333;

@@ -10,7 +10,7 @@ export default class App extends Vue {}
 
 <style lang="less">
 body {
-  min-width: 1200px;
+  // min-width: 1200px;
   min-height: 100vh;
   margin: 0;
   color: #333;
