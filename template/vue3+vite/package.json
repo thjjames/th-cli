@@ -14,12 +14,12 @@
     "setHusky": "npx husky set .husky/pre-commit 'npx lint-staged' && npx husky set .husky/commit-msg 'npx --no-install commitlint --edit $1'"
   },
   "dependencies": {
-    "ant-design-vue": "^4.0.3",
+    "ant-design-vue": "^4.0.8",
     "lodash-es": "^4.17.21",
-    "pinia": "^2.1.6",
+    "pinia": "^2.1.7",
     "swagger": "github:thjjames/swagger",
-    "vue": "^3.3.4",
-    "vue-router": "^4.2.2"
+    "vue": "^3.3.12",
+    "vue-router": "^4.2.5"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.7.2",
@@ -34,7 +34,7 @@
     "less": "^4.2.0",
     "lint-staged": "^14.0.1",
     "postcss-preset-env": "^9.3.0",
-    "typescript": "^5.0.2",
+    "typescript": "^5.2.2",
     "unplugin-auto-import": "^0.16.6",
     "unplugin-vue-components": "^0.25.2",
     "vite": "^4.4.5",

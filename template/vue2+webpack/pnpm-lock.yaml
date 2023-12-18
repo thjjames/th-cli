@@ -98,7 +98,7 @@ devDependencies:
     specifier: ^3.3.3
     version: 3.3.3(webpack@5.89.0)
   typescript:
-    specifier: ^5.0.2
+    specifier: ^5.2.2
     version: 5.2.2
   unplugin-auto-import:
     specifier: ^0.16.6
