@@ -1,5 +1,5 @@
 import { fileURLToPath, URL } from 'node:url';
-import { defineConfig } from 'vite';
+import { defineConfig, splitVendorChunkPlugin } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import legacy from '@vitejs/plugin-legacy';
 import eslintPlugin from 'vite-plugin-eslint';
@@ -15,6 +15,7 @@ export default defineConfig({
   plugins: [
     vue(),
     legacy(),
+    // splitVendorChunkPlugin(),
     eslintPlugin(),
     Components({
       dts: 'src/components.d.ts',
@@ -54,6 +55,19 @@ export default defineConfig({
         target: 'https://getman.cn/api',
         rewrite: path => path.replace(/^\/api/, ''),
         changeOrigin: true,
+      },
+    },
+  },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'vue-vendor': [
+            'vue',
+            'vue-router',
+            'pinia',
+          ],
+        },
       },
     },
   },
