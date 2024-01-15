@@ -68,6 +68,9 @@ export default defineConfig({
             'vue-router',
             'pinia',
           ],
+          'component-library-vendor': [
+            'ant-design-vue',
+          ],
         },
       },
     },
