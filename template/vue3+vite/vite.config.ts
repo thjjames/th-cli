@@ -36,8 +36,7 @@ export default defineConfig({
       vueTemplate: true,
       eslintrc: {
         enabled: true,
-        filepath: './.eslintrc-auto-import.json',
-        globalsPropValue: true,
+        // filepath: './.eslintrc-auto-import.json',
       },
     }),
   ],
