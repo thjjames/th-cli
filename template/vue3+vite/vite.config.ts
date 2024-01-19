@@ -14,7 +14,9 @@ export default defineConfig({
   },
   plugins: [
     vue(),
-    legacy(),
+    legacy({
+      modernPolyfills: true, // consider using an on-demand service like Polyfill.io to only inject necessary polyfills based on actual browser user-agents
+    }),
     // splitVendorChunkPlugin(),
     eslintPlugin(),
     Components({
