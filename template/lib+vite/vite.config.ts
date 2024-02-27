@@ -33,11 +33,7 @@ export default defineConfig({
            * @vitejs/plugin-legacy does not support library mode:
            * https://github.com/vitejs/vite/issues/1639
            *
-           * Transforming ES6+ syntax to ES5 is not supported yet, there are two ways to do:
-           * https://github.com/evanw/esbuild/issues/1010#issuecomment-803865232
-           * We choose to run Babel on the output files after esbuild.
-           *
-           * Running Babel on the generated code:
+           * We choose to run Babel on the generated code:
            * https://github.com/rollup/plugins/blob/master/packages/babel/README.md#running-babel-on-the-generated-code
            */
           getBabelOutputPlugin({
