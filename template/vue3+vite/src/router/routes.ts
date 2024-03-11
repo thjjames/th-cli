@@ -1,14 +1,14 @@
 import type { RouteRecordRaw } from 'vue-router';
 import type { Component } from 'vue';
 
-const Home = (): Promise<Component> => import('@/views/Home.vue');
+const HomePage = (): Promise<Component> => import('@/views/HomePage.vue');
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/home',
     alias: '/',
     name: 'home',
-    component: Home,
+    component: HomePage,
     meta: {
       title: '首页',
     },

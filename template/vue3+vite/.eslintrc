@@ -6,7 +6,7 @@
   },
   "extends": [
     "eslint:recommended",
-    "plugin:vue/vue3-strongly-recommended",
+    "plugin:vue/vue3-recommended",
     "plugin:@typescript-eslint/recommended",
     "./.eslintrc-auto-import.json"
   ],
@@ -17,30 +17,62 @@
     "sourceType": "module"
   },
   "rules": {
-    "indent": ["error", 2],
+    "indent": ["error", 2, { "SwitchCase": 1 }],
     "quotes": ["error", "single"],
     "semi": ["error", "always"],
     "comma-dangle": ["error", "always-multiline"],
-    /* 空格规则START */
+    "max-len": ["error", {
+      "code": 200,
+      "tabWidth": 2,
+      "ignoreUrls": true,
+      "ignoreComments": false,
+      "ignoreRegExpLiterals": true,
+      "ignoreStrings": true,
+      "ignoreTemplateLiterals": true
+    }],
+    "max-params": ["error", 4],
+
+    /* 空格、换行规则 START */
     "array-bracket-spacing": ["warn"],
+    "block-spacing": ["warn"],
+    "comma-spacing": ["warn"],
+    "computed-property-spacing": ["warn"],
+    "func-call-spacing": ["warn"],
     "key-spacing": ["warn"],
     "keyword-spacing": ["warn"],
+    "no-multiple-empty-lines": ["warn", {
+      "max": 1,
+      "maxBOF": 0,
+      "maxEOF": 0
+    }],
     "no-multi-spaces": ["warn"],
     "no-trailing-spaces": ["warn"],
+    "object-curly-newline": ["warn", {
+      "multiline": true,
+      "minProperties": 4,
+      "consistent": true
+    }],
     "object-curly-spacing": ["warn", "always"],
+    "semi-spacing": ["warn"],
     "space-before-blocks": ["warn"],
-    "space-in-parens": ["warn", "never"],
+    "space-in-parens": ["warn"],
     "space-infix-ops": ["warn"],
-    /* 空格规则END */
+    "space-unary-ops": ["warn"],
+    /* 空格、换行规则 END */
+
+    /* Vue规则 START */
     "vue/html-self-closing": ["off"],
     "vue/max-attributes-per-line": ["error", {
       "singleline": 3,
       "multiline": 1
     }],
-    "vue/multi-word-component-names": ["off"],
     "vue/singleline-html-element-content-newline": ["off"],
+    /* Vue规则 END */
+
+    /* Ts规则 START */
     "@typescript-eslint/ban-ts-comment": ["off"],
     "@typescript-eslint/no-explicit-any": ["off"],
     "@typescript-eslint/no-unused-vars": ["off"]
+    /* Ts规则 END */
   }
 }
