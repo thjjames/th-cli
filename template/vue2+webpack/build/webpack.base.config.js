@@ -1,6 +1,7 @@
 const webpack = require("webpack");
 const path = require('path');
 const { VueLoaderPlugin } = require('vue-loader');
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
 
@@ -24,6 +25,7 @@ module.exports = {
       'process.env.APP_MODE': JSON.stringify(process.env.APP_MODE),
       'process.env.BUILD_TIME': JSON.stringify(new Date().toLocaleString()),
     }),
+    new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       template: resolve('public/index.html'),
     }),
