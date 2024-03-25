@@ -16,8 +16,8 @@ module.exports = {
   output: {
     path: resolve('dist'),
     publicPath: '/',
-    filename: '[name].js',
-    chunkFilename: '[name].chunk.js',
+    filename: '[name].[contenthash:8].js',
+    chunkFilename: '[name].chunk.[contenthash:8].js',
   },
   plugins: [
     new VueLoaderPlugin(),
