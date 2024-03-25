@@ -22,4 +22,8 @@ module.exports = merge(webpackBaseConfig, {
       },
     },
   },
+  performance: {
+    maxAssetSize: 500 * 1024,
+    maxEntrypointSize: 500 * 1024,
+  },
 });
