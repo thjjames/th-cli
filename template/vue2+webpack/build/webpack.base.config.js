@@ -4,6 +4,9 @@ const { VueLoaderPlugin } = require('vue-loader');
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
+const Components = require('unplugin-vue-components/webpack');
+const { ElementUiResolver } = require('unplugin-vue-components/resolvers');
+
 
 function resolve(dir) {
   return path.resolve(__dirname, '..', dir);
@@ -31,6 +34,14 @@ module.exports = {
     }),
     new ESLintPlugin({
       extensions: ['ts', 'tsx', 'js', 'jsx', 'vue'],
+    }),
+    Components({
+      dts: 'src/components.d.ts',
+      resolvers: [
+        ElementUiResolver({
+          importStyle: 'less',
+        }),
+      ],
     }),
   ],
   module: {

@@ -3,8 +3,8 @@
     <h1>{{ msg }}</h1>
 
     <div class="mt-8 mb-16">
-      <button @click="count++">count is {{ count }}</button>
-      <button class="ml-8" @click="swaggerGet">$get</button>
+      <el-button type="primary" plain @click="count++">count is {{ count }}</el-button>
+      <el-button class="ml-8" type="primary" @click="swaggerGet">$get</el-button>
       <p>
         Edit
         <code>components/HelloWorld.vue</code> to test HMR
