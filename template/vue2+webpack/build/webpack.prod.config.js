@@ -12,12 +12,33 @@ module.exports = merge(webpackBaseConfig, {
       }),
     ],
     splitChunks: {
+      chunks: 'all',
+      minSize: 20 * 1024,
+      maxAsyncRequests: 6,
+      maxInitialRequests: 6,
+      enforceSizeThreshold: 500 * 1024,
       cacheGroups: {
-        chunks: {
-          chunks: 'all',
+        vue: {
+          name: 'chunk-vue',
+          priority: 20,
+          test: /[\\/]node_modules[\\/]vue(-router|x)?[\\/]/,
+        },
+        componentLibrary: {
+          name: 'chunk-component-library',
+          priority: 15,
+          test: /[\\/]node_modules[\\/]element-ui[\\/]/,
+        },
+        vendor: {
+          name: 'chunk-vendor',
+          chunks: 'initial', // reduce initial code size
+          priority: 10,
+          test: /[\\/]node_modules[\\/]/,
+        },
+        default: {
+          name: 'chunk-common',
           minChunks: 2,
-          minSize: 0,
-          name: 'chunks',
+          priority: 0,
+          reuseExistingChunk: true,
         },
       },
     },
