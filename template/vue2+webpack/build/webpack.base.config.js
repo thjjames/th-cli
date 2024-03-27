@@ -79,16 +79,17 @@ module.exports = {
       },
       {
         test: /\.(png|jpe?g|gif|svg|eot|ttf|otf|woff2?)$/,
-        // exclude: /node_modules/, 
-        use: [
-          {
-            loader: 'url-loader',
-            options: {
-              esModule: false,
-              limit: 8 * 1024,
-            },
-          },
-        ],
+        // exclude: /node_modules/,
+        type: 'asset',
+        // use: [
+        //   {
+        //     loader: 'url-loader',
+        //     options: {
+        //       esModule: false,
+        //       limit: 8 * 1024,
+        //     },
+        //   },
+        // ],
       },
     ],
   },
