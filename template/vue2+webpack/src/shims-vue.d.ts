@@ -13,5 +13,3 @@ declare module 'vue/types/vue' {
     $swagger: any;
   }
 }
-
-declare module 'lodash.throttle';
