@@ -37,7 +37,7 @@ module.exports = {
       dts: 'src/components.d.ts',
       resolvers: [
         ElementUiResolver({
-          importStyle: 'less',
+          importStyle: 'css',
         }),
       ],
     }),
