@@ -6,7 +6,6 @@ const ESLintPlugin = require('eslint-webpack-plugin');
 const Components = require('unplugin-vue-components/webpack');
 const { ElementUiResolver } = require('unplugin-vue-components/resolvers');
 
-
 function resolve(dir) {
   return path.resolve(__dirname, '..', dir);
 }
