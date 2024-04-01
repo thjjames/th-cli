@@ -1,5 +1,7 @@
 <template>
-  <router-view />
+  <div id="app">
+    <router-view />
+  </div>
 </template>
 
 <script lang="ts">
@@ -13,5 +15,10 @@ body {
   color: #333;
   font-size: 14px;
   -webkit-font-smoothing: antialiased;
+  #app {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+  }
 }
 </style>

@@ -14,9 +14,9 @@ body {
   font-size: 14px;
   -webkit-font-smoothing: antialiased;
   #app {
-    margin: 0 auto;
-    padding: 2rem;
-    text-align: center;
+    width: 100%;
+    height: 100%;
+    background: #fff;
   }
 }
 </style>
