@@ -1,6 +1,6 @@
 import App from './App.vue';
 import router from '@/router';
-import plugin from './plugin';
+import plugin from '@/plugin';
 import '@/assets/style/index.less';
 
 const app = createApp(App);
