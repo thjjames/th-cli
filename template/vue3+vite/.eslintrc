@@ -21,6 +21,9 @@
     "quotes": ["error", "single"],
     "semi": ["error", "always"],
     "comma-dangle": ["error", "always-multiline"],
+    "dot-notation": ["error", { "allowKeywords": true }],
+    "eqeqeq": ["error", "always"],
+    "max-classes-per-file": ["error", 1],
     "max-len": ["error", {
       "code": 200,
       "tabWidth": 2,
@@ -31,6 +34,10 @@
       "ignoreTemplateLiterals": true
     }],
     "max-params": ["error", 4],
+    "no-constructor-return": ["error"],
+    "no-eval": ["error"],
+    "no-new-wrappers": ["error"],
+    "no-with": ["error"],
 
     /* 空格、换行规则 START */
     "array-bracket-spacing": ["warn"],
