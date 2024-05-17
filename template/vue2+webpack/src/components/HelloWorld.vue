@@ -32,8 +32,6 @@ export default class HelloWorld extends Vue {
 </script>
 
 <style lang="less" scoped>
-@import '@/assets/style/variable';
-
 .read-the-docs {
   color: var(--text-color-secondary);
 }
