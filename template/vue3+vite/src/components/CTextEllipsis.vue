@@ -57,7 +57,7 @@ onMounted(() => {
 });
 
 watch(
-  () => [props.content, props.rows],
+  () => [props.content, props.rows, props.lineHeight],
   () => {
     nextTick(() => {
       calcHasAction();
