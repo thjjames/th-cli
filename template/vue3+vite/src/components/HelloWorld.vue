@@ -19,8 +19,9 @@
 </template>
 
 <script lang="ts" setup>
+import { swagger } from '@/plugin/swagger';
+
 defineProps<{ msg: string }>();
-const swagger: any = inject('swagger');
 
 const count = ref(0);
 const swaggerGet = _.throttle(() => {

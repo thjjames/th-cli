@@ -3,6 +3,13 @@
 </template>
 
 <script lang="ts" setup>
+import useUserInfoStore from '@/store';
+
+const userInfoStore = useUserInfoStore();
+
+onMounted(() => {
+  userInfoStore.getUserInfo();
+});
 </script>
 
 <style lang="less">
