@@ -1,6 +1,6 @@
 import type { App } from 'vue';
 
-class EventBus {
+export class EventBus {
   // eslint-disable-next-line @typescript-eslint/ban-types
   event: Record<string, (Function & { fn: Function })[]>;
 
@@ -42,11 +42,11 @@ class EventBus {
   }
 }
 
+export const bus = new EventBus();
+
 export default {
   install: (app: App): void => {
-    const bus = new EventBus();
-
-    app.provide('bus', bus);
+    // app.provide('bus', bus);
     app.config.globalProperties.$bus = bus;
   },
 };

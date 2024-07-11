@@ -1,4 +1,4 @@
-class EventBus {
+export class EventBus {
   // eslint-disable-next-line @typescript-eslint/ban-types
   event: Record<string, (Function & { fn: Function })[]>;
 
@@ -40,8 +40,10 @@ class EventBus {
   }
 }
 
+export const bus = new EventBus();
+
 export default {
   install: (Vue): void => {
-    Vue.prototype.$bus = new EventBus();
+    Vue.prototype.$bus = bus;
   },
 };
