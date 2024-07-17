@@ -12,8 +12,12 @@ pnpm install
 # you can replace them with HOST or PORT param in devServer config
 pnpm run start
 
-# build for dev | uat | st | prod environment
-pnpm run build
+# publish for patch | minor | major version
+pnpm version patch
+pnpm publish
+
+pnpm version prepatch --preid=beta
+pnpm publish --tag beta
 ```
 
 ## Contributor
