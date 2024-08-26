@@ -1,4 +1,4 @@
-import { fileURLToPath, URL } from 'node:url';
+import path from 'path';
 import { defineConfig, splitVendorChunkPlugin } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import legacy from '@vitejs/plugin-legacy';
@@ -44,7 +44,7 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url)),
+      '@': path.resolve(__dirname, 'src'),
     },
   },
   server: {
