@@ -1,0 +1,16 @@
+{
+  "name": "<%= name %>",
+  "version": "1.0.0",
+  "description": "<%= answers.description %>",
+  "author": "<%- answers.author %>",
+  "scripts": {
+    "start:xxx": "pnpm --dir apps/xxx run start",
+    "postinstall": "npx husky install",
+    "setHusky": "npx husky set .husky/pre-commit 'npx lint-staged' && npx husky set .husky/commit-msg 'npx --no-install commitlint --edit $1'"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.7.2",
+    "@commitlint/config-conventional": "^17.7.0",
+    "husky": "^8.0.3"
+  }
+}
