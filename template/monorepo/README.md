@@ -10,10 +10,10 @@ pnpm install
 
 # serve with hot reload at localhost
 # you can replace them with HOST or PORT param in devServer config
-pnpm --dir apps/xxx run start
+pnpm --dir packages/xxx run start
 
 # build for dev | uat | st | prod environment
-pnpm --dir apps/xxx run build
+pnpm --dir packages/xxx run build
 ```
 
 ## Contributor
