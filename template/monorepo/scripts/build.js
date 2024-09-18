@@ -11,23 +11,23 @@ import { cpus } from 'node:os';
  * @returns {Promise<void[]>} - A Promise array containing all iteration results.
  */
 const runParallel = async (maxConcurrency, source, iteratorFn) => {
-  const ret = []
-  const executing = []
+  const ret = [];
+  const executing = [];
   for (const item of source) {
-    const p = Promise.resolve().then(() => iteratorFn(item))
-    ret.push(p)
+    const p = Promise.resolve().then(() => iteratorFn(item));
+    ret.push(p);
 
     if (maxConcurrency <= source.length) {
       const e = p.then(() => {
-        executing.splice(executing.indexOf(e), 1)
+        executing.splice(executing.indexOf(e), 1);
       })
-      executing.push(e)
+      executing.push(e);
       if (executing.length >= maxConcurrency) {
-        await Promise.race(executing)
+        await Promise.race(executing);
       }
     }
   }
-  return Promise.all(ret)
+  return Promise.all(ret);
 };
 
 /**
