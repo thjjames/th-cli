@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "<%= answers.description %>",
   "author": "<%- answers.author %>",
+  "type": "module",
   "scripts": {
     "start:xxx": "pnpm --dir packages/xxx run start",
+    "build": "node scripts/build.js",
     "postinstall": "npx husky install",
     "setHusky": "npx husky set .husky/pre-commit 'npx lint-staged' && npx husky set .husky/commit-msg 'npx --no-install commitlint --edit $1'"
   },
