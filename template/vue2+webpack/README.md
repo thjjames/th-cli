@@ -12,7 +12,7 @@ pnpm install
 # you can replace them with HOST or PORT param in devServer config
 pnpm run start
 
-# build for dev | uat | st | prod environment
+# build for dev | sit | uat | pre | prod environment
 pnpm run build
 ```
 

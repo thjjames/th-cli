@@ -5,10 +5,10 @@
   "author": "<%- answers.author %>",
   "scripts": {
     "dev": "APP_MODE=dev webpack-dev-server --config build/webpack.dev.config.js",
-    "build:SIT": "APP_MODE=sit webpack --config build/webpack.prod.config.js",
-    "build:UAT": "APP_MODE=uat webpack --config build/webpack.prod.config.js",
-    "build:PRE": "APP_MODE=pre webpack --config build/webpack.prod.config.js",
-    "build:PROD": "APP_MODE=prod webpack --config build/webpack.prod.config.js",
+    "build:sit": "APP_MODE=sit webpack --config build/webpack.prod.config.js",
+    "build:uat": "APP_MODE=uat webpack --config build/webpack.prod.config.js",
+    "build:pre": "APP_MODE=pre webpack --config build/webpack.prod.config.js",
+    "build:prod": "APP_MODE=prod webpack --config build/webpack.prod.config.js",
     "postinstall": "npx husky install",
     "setHusky": "npx husky set .husky/pre-commit 'npx lint-staged' && npx husky set .husky/commit-msg 'npx --no-install commitlint --edit $1'"
   },

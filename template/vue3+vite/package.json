@@ -6,10 +6,10 @@
   "scripts": {
     "start": "pnpm run dev",
     "dev": "vite --mode dev",
-    "build:SIT": "vite build --mode sit",
-    "build:UAT": "vite build --mode uat",
-    "build:PRE": "vite build --mode pre",
-    "build:PROD": "vite build --mode prod",
+    "build:sit": "vite build --mode sit",
+    "build:uat": "vite build --mode uat",
+    "build:pre": "vite build --mode pre",
+    "build:prod": "vite build --mode prod",
     "postinstall": "npx husky install",
     "setHusky": "npx husky set .husky/pre-commit 'npx lint-staged' && npx husky set .husky/commit-msg 'npx --no-install commitlint --edit $1'"
   },
