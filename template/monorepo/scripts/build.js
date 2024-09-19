@@ -1,7 +1,10 @@
 import fs from 'node:fs';
 import path from 'node:path'
-import { execSync } from 'node:child_process';
+import { exec, execSync } from 'node:child_process';
+import { promisify } from 'node:util';
 import { cpus } from 'node:os';
+
+const execAsync = promisify(exec);
 
 /**
  * Runs iterator function in parallel.
@@ -36,8 +39,25 @@ const runParallel = async (maxConcurrency, source, iteratorFn) => {
  * @returns {Promise<void>} - A promise representing the build process.
  */
 const build = async (target) => {
-  execSync(`pnpm --dir ${target} run build`, {
-    stdio: 'inherit'
+  // execSync(`pnpm --dir ${target} run build`, {
+  //   stdio: 'inherit'
+  // });
+
+  return execAsync(`pnpm --dir ${target} run build`, {
+    env: {
+      ...process.env,
+      FORCE_COLOR: true
+    }
+  }).then(({
+    stderr,
+    stdout
+  }) => {
+    console.log(stderr);
+    console.log(stdout);
+    return {
+      stderr,
+      stdout
+    };
   });
 };
 
