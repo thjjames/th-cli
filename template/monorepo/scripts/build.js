@@ -6,6 +6,18 @@ import { cpus } from 'node:os';
 
 const execAsync = promisify(exec);
 
+const readPackageJson = (targetDir) => {
+  const packageJsonPath = path.resolve(targetDir, 'package.json');
+  let packageJson
+  try {
+    packageJson = fs.readFileSync(packageJsonPath, 'utf-8');
+    packageJson = JSON.parse(packageJson);
+  } catch (err) {
+    throw new Error('package.json is non-existent or malformed');
+  }
+  return packageJson;
+};
+
 /**
  * Runs iterator function in parallel.
  * @param {number} maxConcurrency - The maximum concurrency.
@@ -39,11 +51,16 @@ const runParallel = async (maxConcurrency, source, iteratorFn) => {
  * @returns {Promise<void>} - A promise representing the build process.
  */
 const build = async (target) => {
-  // execSync(`pnpm --dir ${target} run build`, {
+  let buildScript = `build:${process.env.APP_MODE}`;
+  if (!readPackageJson(target).scripts[buildScript]) {
+    buildScript = 'build';
+  }
+
+  // execSync(`pnpm --dir ${target} run ${buildScript}`, {
   //   stdio: 'inherit'
   // });
-
-  return execAsync(`pnpm --dir ${target} run build`, {
+  
+  return execAsync(`pnpm --dir ${target} run ${buildScript}`, {
     env: {
       ...process.env,
       FORCE_COLOR: true
