@@ -32,7 +32,7 @@ const runParallel = async (maxConcurrency, source, iteratorFn) => {
     const p = Promise.resolve().then(() => iteratorFn(item));
     ret.push(p);
 
-    if (maxConcurrency <= source.length) {
+    if (maxConcurrency < source.length) {
       const e = p.then(() => {
         executing.splice(executing.indexOf(e), 1);
       })
