@@ -2,7 +2,7 @@ import path from 'path';
 import { defineConfig, splitVendorChunkPlugin } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import legacy from '@vitejs/plugin-legacy';
-import eslintPlugin from 'vite-plugin-eslint';
+import eslint from 'vite-plugin-eslint2';
 import Components from 'unplugin-vue-components/vite';
 import { AntDesignVueResolver } from 'unplugin-vue-components/resolvers';
 import AutoImport from 'unplugin-auto-import/vite';
@@ -18,7 +18,10 @@ export default defineConfig({
       modernPolyfills: true, // consider using an on-demand service like Polyfill.io to only inject necessary polyfills based on actual browser user-agents
     }),
     // splitVendorChunkPlugin(),
-    eslintPlugin(),
+    eslint({
+      cache: false,
+      include: ['**/*.{js,jsx,ts,tsx,vue}'],
+    }),
     Components({
       dts: 'src/components.d.ts',
       resolvers: [
